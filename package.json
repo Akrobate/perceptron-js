@@ -1,0 +1,19 @@
+{
+  "name": "perceptron-js",
+  "version": "0.0.1",
+  "description": "Mono layer neural network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akrobate/perceptron-js.git"
+  },
+  "author": "Artiom FEDOROV <fedorov.artiom@yahoo.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akrobate/perceptron-js/issues"
+  },
+  "homepage": "https://github.com/Akrobate/perceptron-js#readme"
+}
