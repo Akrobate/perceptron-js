@@ -35,7 +35,6 @@ module.exports = class PerceptronJs {
 
     }
 
-
 	/**
 	 *	Method for calculate weights
 	 */
@@ -43,5 +42,18 @@ module.exports = class PerceptronJs {
 		let result = (valeur + (valeur_desiree - valeur_obtenue) * valeur_entree * 10);
 		return result;
 	}
+
+    /**
+     *  Calculate the sum of the data
+     */
+    public function calculTotalMotif(motif, numW) {
+        total = 0;
+        for (i=0; i < this->size; i++) {
+            if (motif[i] == 1) {
+                total += this->weights[numW][i];
+            }
+        }
+        return total;
+}
 
 }
