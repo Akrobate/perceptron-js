@@ -35,6 +35,23 @@ module.exports = class PerceptronJs {
 
     }
 
+    /**
+	 *	Train method
+	 *
+	 */
+
+	train(nbtrains) {
+		for (k = 0; k < nbtrains; k++) {
+			for (i = 0; i < this->nbitems; i++) {
+				for(j = 0; j < count(this->learnData); j++) {
+					this->learn(j, i);
+				}
+			}
+		}
+	}
+
+
+
 	/**
 	 *	Method for calculate weights
 	 */
