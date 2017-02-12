@@ -43,12 +43,11 @@ module.exports = class PerceptronJs {
 		return result;
 	}
 
-
     /**
      * Calculate from a given motif
      */
     calculMotif(motif, numW) {
-		total = this->calculTotalMotif(motif, numW);
+		let total = this->calculTotalMotif(motif, numW);
 		return (total > 0)?1:0;
 	}
 
@@ -57,13 +56,13 @@ module.exports = class PerceptronJs {
      *  Calculate the sum of the data
      */
     calculTotalMotif(motif, numW) {
-        total = 0;
+        let total = 0;
         for (i=0; i < this->size; i++) {
             if (motif[i] == 1) {
                 total += this->weights[numW][i];
             }
         }
         return total;
-}
+    }
 
 }
