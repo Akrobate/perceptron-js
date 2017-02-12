@@ -1,6 +1,5 @@
 'use strict';
 
-
 module.exports = class PerceptronJs {
 
 //   ____  _   _ ____  _     ___ ____
@@ -36,5 +35,13 @@ module.exports = class PerceptronJs {
 
     }
 
+
+	/**
+	 *	Method for calculate weights
+	 */
+	calculWeights(valeur, valeur_desiree, valeur_obtenue, valeur_entree) {
+		let result = (valeur + (valeur_desiree - valeur_obtenue) * valeur_entree * 10);
+		return result;
+	}
 
 }
