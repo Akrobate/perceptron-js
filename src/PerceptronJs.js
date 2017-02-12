@@ -51,6 +51,23 @@ module.exports = class PerceptronJs {
 	}
 
 
+	/**
+	 *	Learning method
+	 *
+	 */
+
+	learn(numG, numW) {
+		result = this->calcul(numG, numW);
+
+		for (i = 0; i < this->size; i++) {
+			this->weights[numW][i] = this->calculWeights(
+					this->weights[numW][i],
+					this->learnData[numG]['result'] == this->keys_results[numW],
+					result,
+					this->learnData[numG]['data'][i]
+			);
+		}
+	}
 
 	/**
 	 *	Method for calculate weights
