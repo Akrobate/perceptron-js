@@ -12,7 +12,7 @@ let model_filename = "./models/myModel.json"
 
 let perceptron = new PerceptronJs()
 
-perceptron.fit(data, targets)
+perceptron.fit(data, target)
 perceptron.predict(data)
 
 perceptron.save(model_filename)

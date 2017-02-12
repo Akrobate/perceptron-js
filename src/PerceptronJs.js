@@ -14,8 +14,9 @@ module.exports = class PerceptronJs {
         this.targets = []
     }
 
-    fit() {
-
+    fit(data, targets) {
+        this.data = data
+        this.targets = targets
     }
 
     predict() {
@@ -27,5 +28,13 @@ module.exports = class PerceptronJs {
 //  | |_) | |_) || | \ \ / / _ \ | | |  _|
 //  |  __/|  _ < | |  \ V / ___ \| | | |___
 //  |_|   |_| \_\___|  \_/_/   \_\_| |_____|
+
+    /**
+     * Weights init randomly
+     */
+    init() {
+
+    }
+
 
 }
