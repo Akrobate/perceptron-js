@@ -42,9 +42,9 @@ module.exports = class PerceptronJs {
 
 	train(nbtrains) {
 		for (k = 0; k < nbtrains; k++) {
-			for (i = 0; i < this->nbitems; i++) {
-				for(j = 0; j < count(this->learnData); j++) {
-					this->learn(j, i);
+			for (i = 0; i < this.nbitems; i++) {
+				for(j = 0; j < count(this.learnData); j++) {
+					this.learn(j, i);
 				}
 			}
 		}
@@ -57,14 +57,14 @@ module.exports = class PerceptronJs {
 	 */
 
 	learn(numG, numW) {
-		result = this->calcul(numG, numW);
+		result = this.calcul(numG, numW);
 
-		for (i = 0; i < this->size; i++) {
-			this->weights[numW][i] = this->calculWeights(
-					this->weights[numW][i],
-					this->learnData[numG]['result'] == this->keys_results[numW],
+		for (i = 0; i < this.size; i++) {
+			this.weights[numW][i] = this.calculWeights(
+					this.weights[numW][i],
+					this.learnData[numG]['result'] == this.keys_results[numW],
 					result,
-					this->learnData[numG]['data'][i]
+					this.learnData[numG]['data'][i]
 			);
 		}
 	}
@@ -81,7 +81,7 @@ module.exports = class PerceptronJs {
      * Calculate from a given motif
      */
     calculMotif(motif, numW) {
-		let total = this->calculTotalMotif(motif, numW);
+		let total = this.calculTotalMotif(motif, numW);
 		return (total > 0)?1:0;
 	}
 
@@ -91,9 +91,9 @@ module.exports = class PerceptronJs {
      */
     calculTotalMotif(motif, numW) {
         let total = 0;
-        for (i=0; i < this->size; i++) {
+        for (i=0; i < this.size; i++) {
             if (motif[i] == 1) {
-                total += this->weights[numW][i];
+                total += this.weights[numW][i];
             }
         }
         return total;
