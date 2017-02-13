@@ -99,4 +99,30 @@ module.exports = class PerceptronJs {
         return total;
     }
 
+
+	calcul(numG, numW) {
+		return this.calculMotif(this.learnData[numG]['data'], numW);
+	}
+
+    // Answers methods
+	answerFormMotif(motif) {
+		answ = [];
+		foreach(this.weights as key => weight) {
+			if (this.calculMotif(motif, key)) {
+				answ[] = key + 1
+			}
+		}
+		return answ;
+	}
+
+    // Answers methods
+	answerScoresFormMotif(motif) {
+		answ = [];
+		foreach(this.weights as key => weight) {
+			scores[key +1] = this.calculTotalMotif(motif, key);
+		}
+		// asort(scores)
+		return scores
+	}
+
 }
